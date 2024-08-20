@@ -1,0 +1,54 @@
+.logo{
+    height: 50%
+    
+}
+
+.heading{
+    font-size: 50px;
+    text-align: center;
+}
+
+
+.para{
+    font-size: 20px;
+     text-align: center;
+     line-height: 30px;
+      margin-bottom: 50px;
+
+}
+.ice1{
+    height: 400px;
+    width: 33%;
+}
+.ice2{
+    height: 400px;
+    width: 33%;
+}
+.ice3{
+    height: 400px;
+    width: 33%;
+}
+
+.ice_cream_heading{
+    font-size: 50px;
+    text-align: center;
+
+}
+
+
+.ice_cream_video1{
+    height: 300;
+    font-size: 50px;
+    text-align: center;
+}
+
+.video1{
+    text-align: center;
+    height: 400px;
+    width:500px
+    
+}
+
+.display_video{
+    text-align: center;
+}

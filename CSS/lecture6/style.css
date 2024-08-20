@@ -1,0 +1,43 @@
+/* .element{
+    color: blue;
+}
+.elements::first-line{
+    color: yellowgreen;
+} */
+
+
+/* .elements::first-letter{
+    color: brown;
+    font-size: 50px;
+} */
+/* 
+.elements::selection{
+    background-color: black;
+    color: blueviolet;
+} */
+ .elements::after{
+    content: "***";
+    color: blue;
+ }
+
+ .elements::before{
+    content: "***";
+    color: brown;
+ }
+
+.color{
+    background-color: red;
+}
+.img{
+    background-image: url("img/ice\ cream.jpg") ;
+    /* background-size: cover; */
+    /* background-position: 100px; */
+    /* background-size: 500px; */
+    /* background-repeat: no-repeat; */
+    /* background-attachment: scroll; */
+    /* background-attachment: fixed; */
+    
+
+    height: 500px;
+    width: 100%;
+}

@@ -1,0 +1,32 @@
+.transform{
+    height: 200px;
+    width: 200px;
+    background-color: blue;
+    /* transform:rotate(290deg); */
+    /* transform: translate(28%,60%); */
+    /* transform: skew(150deg,100deg); */
+    /* transform: scale(2,5); */
+
+}
+.translation{
+    height: 200px;
+    width: 200px;
+    background-color: red;
+    transition-property: width;
+    transition-duration: 5s;
+    transition-timing-function: ease-in;
+    transition-delay: 2s;
+    
+}
+
+.translation:hover{
+    width: 500px;
+
+}
+img{
+    /* filter: blur(5px); */
+    /* filter: brightness(200); */
+    /* filter: grayscale(100); */
+    /* filter: contrast(150%); */
+    /* filter: opacity(5%); */
+}

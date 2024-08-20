@@ -1,0 +1,17 @@
+.parent img{
+    height: 300px;
+    width: 200px;
+    float: right;
+     
+}
+
+.parent{
+    border: 2px solid black;
+    height: 450px;
+}
+
+p{
+    clear: both;
+    clear: left;
+    clear: right;
+}

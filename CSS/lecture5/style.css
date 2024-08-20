@@ -1,0 +1,52 @@
+/* .psudo
+{
+    color: blue ;
+} */
+
+/* .psudo:first-child{
+    color: blanchedalmond;
+}
+
+.psudo:last-child{
+    color: red;
+} */
+
+
+p:nth-child(odd){
+    color: blue;
+}
+
+.psudo:nth-last-child(even)
+{
+    color:red ;
+}
+
+.btn{
+    color: aqua;
+    background-color: brown;
+
+}
+
+
+.btn:hover{
+    color: blueviolet;
+    background-color: white;
+}
+.btn:visited{
+    color: red;
+}
+.btn:active{
+    color: khaki;
+}
+/* 
+:root{
+    color: brown;
+    background-color: black;
+} */
+ 
+.classs:link{
+
+    color: red;
+    background-color: brown;
+}
+

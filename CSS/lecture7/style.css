@@ -1,0 +1,24 @@
+.box_shadow{
+    border: 2px solid blue;
+    box-shadow: 100px;
+    height: 100px;
+    width: 500px;
+}
+
+.width{
+
+    color: red;
+    /* height: 500px;
+    width: 40%; */
+    min-height: 400px;
+    max-width: 1000px;
+}
+
+
+.list{
+    list-style: circle;
+    /* list-style-type: lower-roman    ; */
+    /* list-style-type: disc; */
+    list-style-position: inside;
+    list-style-position: outside;
+}

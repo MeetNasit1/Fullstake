@@ -1,0 +1,13 @@
+.amimation{
+    height: 700px;
+    width: 100px;
+    border: 2px solid black;    
+}
+
+.img1{
+    height: 100px;
+    width: 100px;
+    z-index: 3;
+    position: relative;
+    
+}

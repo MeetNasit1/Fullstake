@@ -1,0 +1,545 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0px;
+    padding: 0px;
+
+}
+a{
+    text-decoration: none;
+}
+
+/* header section :start */
+/* nav bar :start */
+
+
+.container{
+    max-width: calc(100vw - 10vw);
+    margin:0 auto;
+    /* text-align: center; */
+}
+.navbar{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 0px;
+}
+.nav-items nav ul{
+    display: flex;
+}
+.nav-items nav ul li a{
+    padding:20px 15px;
+    font-size: 18px;
+    font-weight: 700;
+    color: black;
+}
+.nav-items nav ul li {
+   list-style-type: none;
+}
+.manu{
+    display: flex;
+}
+
+.selectmenu{
+    display: flex;
+}
+
+.selectmenu select{
+    border:none;
+    font-size: 20px;
+    font-weight: bold;
+    color: black;
+
+}
+
+.mobile-menu{
+    display: none;
+}
+
+.header_img{
+    /* border: 1px solid red; */
+    display: flex;
+    justify-content: center;
+}
+
+.header_img1{
+
+    /* max-width: 500px; */
+}
+
+.header_img1 img{
+    max-width: 100%;
+    height: auto;
+}
+.header_text{
+    max-width: 500px;
+}
+
+.header_text h1{
+    padding-top: 80px;
+    padding-left: 20px;
+   
+    font-size: 40px;
+}
+.header_text p{
+    font-size: 30px;
+    padding-left: 20px;
+}
+.header_btn{
+    background-color: rgba(230, 107, 19, 0.859);
+    padding-left: 20px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-right: 20px;
+    border-radius: 45px;
+    font-weight: 20px;
+}
+
+
+/* header section :start */
+/* nav bar :start */
+
+/* ---------------------------------------------------------------------------------------------- */
+
+/* service section  start*/
+
+.meet{
+    text-align: center  ;
+    padding-top: 50px;
+}
+.meet h4{
+    font-size: 20px;
+}
+.meet p{
+    font-size: 1.9rem;
+}
+
+.service_block{
+    display: flex;
+    text-align: center;
+}
+.seo img{
+    height: 50px;
+    width: auto;
+
+}
+.seo{
+    /* border: 2px solid black; */
+    /* height: auto; */
+    width: 250px;
+    box-shadow: 3px 2px 4px black;
+
+}
+.seo a {
+    color: #fab758;
+}
+.web img{
+    height: 50px;
+    width: auto;
+
+}
+.web a{
+    color: #e2626b;
+}
+.web{
+    /* border: 2px solid black; */
+    /* height: auto; */
+    width: 250px;
+    box-shadow: 3px 2px 4px black;
+}
+.social img{
+    height: 50px;
+    width: auto;
+}
+.social{
+    /* border: 2px solid black; */
+    /* height: auto; */
+    width: 250px;
+    box-shadow: 3px 2px 4px black;
+
+}
+.social a{
+    color: #45c4a0;
+}
+.content img{
+    height: 50px;
+    width: auto;
+
+}
+.content{
+    /* border: 2px solid red; */
+    /* height: auto; */
+    width: 250px;
+    box-shadow: 3px 2px 4px black;
+
+}
+.content a {
+    color: #3f78e0;
+}
+
+.service_block{
+    width: auto;
+    padding-left: 20px;
+    padding-top: 100px;
+    padding-right: 20px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    /* margin: 200px; */
+}
+
+
+/* service section  end*/
+
+/* ----------------------------------------------------------------------------------- */
+
+/* <!-- ANALYZE NOW section  start--> */
+
+.wonder{
+    padding-top: 100px;
+    display: flex;
+   
+}
+.wonder img{
+    max-width: 100%;
+    height: auto;
+}
+.now_img{
+    max-width: 800px;
+    /* text-align: center; */
+}
+.now_text{
+    padding-top: 100px;
+    max-width: 600px;    
+    /* text-align: center; */
+}
+.now_text h5{
+    font-size: 16px;
+    color: #aab0bc;
+}
+.now_text p{
+    font-size: 17px;
+    color:#60697b;
+}
+.now_text h4{
+    font-size: 38px;
+    color: #343f52;
+}
+.enter{
+    border: none ;
+    padding-left: 0%;
+    line-height: 29px;
+    font-size: 15px;
+    text-align: left;
+}
+.url button{
+    border: none;
+    border-radius: 0px 8px 8px 0px;
+    background-color: #fab758;    ;
+    font-size: 17px;
+    line-height: 29px;
+}
+
+
+/* <!-- ANALYZE NOW section  end--> */
+
+
+/* ---------------------------------------------------------------------------------- */
+
+
+
+/* <!-- OUR STRATEGY start --> */
+
+.our{
+    max-width:  600px;
+}
+.our h5{
+    font-size: 16px;
+    line-height: 22px;
+    color: #aab0bc;
+
+}
+.our h3{
+    font-size: 48px;
+    line-height: 48px;
+    color: #343f52;
+}
+.our p{
+    font-size: 17px;
+    line-height: 29px;
+    color: #60697b;
+}
+.our button{
+    font-size: 17px;
+    line-height: 29px;
+    background-color: #fab758;
+    color: white;
+    border-radius: 1000px;
+    border: none;
+}
+.cards{
+    padding-left: 100px;
+    padding-top: 100px; 
+    max-width: 600px;
+}
+.strategy{
+    display: flex   ;
+    max-width: 1200px;
+    padding-top: 100px;
+}
+.cards_1{
+    margin-left: 20px;
+    /* padding-left: 100px; */
+    box-shadow: 0px 0px 8px 0px;
+    /* text-align: start; */
+
+}
+.cards_1 h3{
+    font-size: 20px;
+    text-align: start;
+    line-height: 29px;
+    color: #343f52;
+    /* background-color: #ffffff; */
+}
+.cards_1 p{
+    font-size: 17px;
+    line-height: 29px;
+    color: #60697b;
+    text-align: start;
+
+    
+
+}
+
+
+.cards_2{
+    margin-left: 60px;
+    padding-top: 25px;
+    /* padding-left: 200px; */
+    box-shadow: 0px 0px 8px 0px;
+}
+.cards_2 h3{
+    font-size: 20px;
+    line-height: 29px;
+    color: #343f52;
+}
+.cards_2 p{
+    font-size: 17px;
+    line-height: 29px;
+    color: #60697b;
+}
+
+.cards_3{
+    margin-left: 20px;
+    padding-top: 25px;
+    /* padding-left: 100px; */
+    box-shadow: 0px 0px 8px 0px;
+
+}
+.cards_3 h3{
+    font-size: 20px;
+    line-height: 29px;
+    color: #343f52;
+}
+.cards_3 p{
+    font-size: 17px;
+    line-height: 29px;
+    color: #60697b;
+}
+
+/* <!-- OUR STRATEGY end --> */
+/* ---------------------------------------------------------------------------------------------------------- */
+
+/* <!-- WHY CHOOSE US start --> */
+
+
+.choice{
+    max-width: 800px;
+    /* max-width: 100%; */
+}
+.why{
+    padding-top: 100px;
+    display: flex;
+    max-width: 100%;
+}
+
+.solutions h4{
+    font-size: 16px;
+    line-height: 22px;
+    color: #aab0bc;
+}
+
+.solutions h3{
+    font-size: 38px;
+    line-height: 48px;
+    color: #343f52
+    ;
+}
+
+.why img{
+    max-width: 100%;
+    height: auto;
+}
+
+
+/* <!-- WHY CHOOSE US END  -->  */
+
+/* ----------------------------------------------------------------------------------------------- */
+/* <!-- OUR TEAM START --> */
+
+.our_text{
+    padding-top: 100px;
+    text-align: center;
+}
+.our_text h4{
+    font-size: 16px;
+    line-height: 22px;
+    color: #aab0bc;
+}
+
+.our_text h3{
+    font-size: 38px;
+    line-height: 48px;
+    color: #343f52;
+}
+
+
+.our_intro{
+    display: flex;
+    gap: 30px;
+}
+
+
+.our_intro img{
+    border-radius: 50%;
+}
+
+.our_intro h4{
+    font-size: 20px;
+    color: #343f52;
+    line-height: 29px;
+}
+
+.our_intro h5{
+    font-size: 14px;
+    color: #aab0bc;
+    line-height: 24px;
+
+}
+
+.our_intro p{
+    font-size: 17px;
+    color: #60697b;
+    line-height: 29px;
+}
+.intro_1{
+    padding-top: 40px;
+    box-shadow: 0px 0px 8px 0px;
+    text-align: left;
+    padding-left: 50px;
+
+}
+
+.intro_2{
+    padding-top: 40px;
+    padding-left: 50px;
+    text-align: left;
+    box-shadow: 0px 0px 8px 0px;
+}
+
+.intro_3{
+    text-align: left;
+    padding-top: 40px;
+    padding-left: 50px;
+    box-shadow: 0px 0px 8px 0px;
+}
+
+.intro_4{
+    padding-top: 40px;
+    text-align: left;
+    padding-left: 50px;
+    box-shadow: 0px 0px 8px 0px;
+}
+
+
+.our_intro span i{
+    gap: 20px;
+    
+}
+
+
+/* <!-- OUR TEAM end --> */
+
+/* --------------------------------------------------------------------------------- */
+
+/* <!-- OUR SOLUTIONS  start --> */
+
+.solution{
+    padding: 100px;
+    display: flex;
+}
+.our_div{
+    display: flex;
+}
+
+.our_div1 h3 span i{
+    border-radius: 50;
+    
+}
+
+.solution_text h4{
+    font-size: 16px;
+    line-height: 22px;
+    color: #aab0bc    ;
+}
+
+.solution_text h3{
+    font-size: 38px;
+    line-height: 45px;
+    color: #343f52    ;
+}
+.solution_text p{
+    font-size: 17px;
+    line-height: 28px;
+    color: #60697b;
+}
+
+.our_div1 h3{
+    font-size: 17px;
+    line-height: 28px;
+    color: #60697b;
+}
+
+.our_div2 h3{
+    font-size: 17px;
+    line-height: 28px;
+    color: #60697b;
+}
+
+.solution_img img{
+    max-width: 100%;
+    height: auto;
+    
+}
+
+.solution_text{
+    max-width: 500px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

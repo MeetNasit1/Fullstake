@@ -1,0 +1,58 @@
+/* Media Queries */
+/* 320px
+576px
+768px
+1024px
+1200px */
+@media (max-width:1200px){
+
+}
+@media (max-width:1024px){
+    .header_img{
+        flex-wrap: wrap;
+    }
+    .service_block{
+        flex-wrap: wrap;
+    }
+    /* .wonder{
+        flex-wrap: wrap;
+    } */
+    .strategy{
+        flex-wrap:wrap ;
+
+    }
+
+
+}
+@media (max-width:768px){
+    .nav-items{
+            display: none;
+    }
+    .mobile-menu{
+        font-size: 20px;
+        margin-left: 10px;
+        display: flex;
+        align-items: center;
+
+    }
+    .wonder{
+        flex-wrap: wrap;
+    }
+    .why{
+        flex-wrap: wrap;
+    }
+    .our_intro{
+        flex-wrap: wrap;
+    }
+    .solution{
+        flex-wrap: wrap;
+        padding: 10px;
+    }
+    
+}
+@media (max-width:576px){
+
+}
+@media (max-width:320px){
+    
+}

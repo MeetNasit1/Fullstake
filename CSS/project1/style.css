@@ -1,0 +1,643 @@
+
+/* -------------------------------------------------------------header section ------------------------------------------------------*/
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.img{
+   
+    background-image: url("./photo/photo1.jpg");
+    height: 100vh;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    position: relative;
+
+}
+
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 20px;
+}
+
+.container ul{
+    display: flex;
+    gap: 40px;
+}
+
+.container li {
+    list-style-type: none;
+}
+
+.container a{
+    text-decoration: none;
+    color: white;
+}
+
+.film{
+    /* background-color: white; */
+    /* height: 200px;
+    width: 200px; */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    color: white;
+    text-align: center;
+    /* width: 80%; */
+}
+
+.film h4{
+    text-align:inherit;
+    font-size: 15px;
+    line-height: 25px;
+}
+
+
+.film h1{
+    text-align: inherit;
+    font-size: 70px;
+    font-weight: 900;
+}
+
+
+.film p{
+    text-align: center;
+    font-size: 18px;
+    margin-bottom: 20px;
+    
+
+}
+
+.Watch{
+    background-color: #FFBF00;
+    color: white;
+    padding: 10px 20px;
+    font-size: 15px;
+    border: none;
+    text-align: center;  
+}
+.Watch:hover{
+    background-color: black;
+
+}
+
+
+
+.home_manu{
+    color: white;
+}
+
+           /* -----------------------------------------second page about us story ---------------------------------------------------*/
+.basic{
+    color: #FFBF00;
+    font-size: 17px;
+    
+}
+.us{
+    color: black;
+    font-size: 35px;
+}
+.are{
+    color: black;
+}
+.btn1{
+    background-color: #FFBF00;
+    color: white;
+    /* padding-top: 15px; */
+    /* padding-left: 20px; */
+    text-align: center;
+    font-size: 15px;
+    font-weight: 500;
+    border: none;
+    padding: 15px;
+}
+.btn1 :hover{
+    background-color: black;
+}
+
+.a_container{
+    width: 90%;
+    margin: 0px 40px;
+    padding: 120px 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.avout_2{
+    width: 45%;
+    line-height: 50PX;
+}
+
+.avout_2 P{
+    /* width: 45%; */
+    line-height: 18PX;
+    margin-bottom: 15PX;
+}
+
+.a_img{
+    width: 45%;
+}
+
+.a_img img{
+    height: auto;
+    width: 100%;
+}
+
+
+
+.h4{
+    text-align: center;
+    font-size: 50px;
+    text-transform: uppercase;
+    padding-left: 10px;
+}
+
+.h4{
+    text-align: center;
+    font-size: 50px;
+}
+.h4::before{
+    content: "-------";
+    color: #FFBF00;
+
+}
+
+.h4::after{
+    content: "-------";
+    color: #FFBF00;
+    text-align: center;
+    
+}
+
+.our{
+    display: flex; 
+    
+    margin-right: -15px;
+    margin-left: -15px;
+}
+.icon_tv{
+    text-align: center;
+    padding: 166px;
+    margin: -35px;
+    padding-left: 275px;
+}
+.tv{
+    font-size: 50px;
+}
+
+
+.icon_trophy{
+    text-align: center;
+    padding: 166px;
+    margin: -23px;
+    padding-left: 0px; 
+}
+.trophy{
+    font-size: 50px;
+}
+
+.icon_film{
+    text-align: center;
+    padding: 166px;
+    margin: -23px;
+    padding-left: 0px; 
+}
+.film_1{
+    font-size: 50px;
+}
+.icon_camera{
+    text-align: center;
+    padding: 166px;
+    margin: -23px;
+    padding-left: 0px; 
+}
+.camera_1{
+    font-size: 50px;
+}
+
+
+/*----------------------------------------------------------- video section -----------------------------------------------------*/
+
+.video_img{
+    background-image: url("https://megaone.acrothemes.com/film/img/video-img.jpg");
+    background-size: cover;
+    position: relative;
+    height: 550px;
+    background-position: center;
+    background-attachment: fixed;
+
+}
+.btt2{
+    padding-left: 100px;
+    position: relative;
+    color: white;
+    font-size: 70px;
+    text-align: center;
+    padding-top: 200px;
+    /* text-decoration: none; */
+    
+}
+.btt2 a{
+    text-decoration: none;
+    color: white;
+}
+
+/* .video_btn{
+    
+    /* margin-top: 10px; */
+    /* text-decoration: none; */
+    /* margin-left: 10px; */
+    /* height: 50px;
+    width: 100px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    font-size: 100px; */
+ */
+
+
+/*-------------------------------------------------------------- out  cast section -------------------------------------------------------*/
+
+.cast h5{
+    color: #FFBF00;
+
+}
+.cast_1 h4{
+    font-size: 20px;
+    
+}
+
+.cast{
+    display: flex;
+    margin: 72px 85px;
+    padding: 20px;
+}
+.cast_1 ,h4, h5, p{
+    margin-right: 10px;
+    background-color: #6c757d03;
+    /* padding: 18px; */
+}
+
+.cast_2 h4,h5,p{
+    margin-right: 10px;
+    background-color: #6c757d03;
+    /* padding: 18px; */
+
+}
+
+.cast_3 h4,h5,p{
+    margin-right: 10px;
+    background-color: #6c757d03;
+    padding: 18px;
+
+}
+.cast_4 h4,h5,p{
+    margin-right: 10px;
+    background-color: #6c757d03;
+    padding: 14px;
+
+}
+.cast_0 h2{
+    text-align: center;
+    padding-top: 130px;
+    margin: 20px;
+    font-size: 50px;
+    text-transform: uppercase;
+}
+.cast_0 h2::before{
+    content: "-------";
+    color: #FFBF00;
+    text-align: center;
+}
+
+.cast_0 h2::after{
+    content: "-------";
+    color: #FFBF00;
+    text-align: center;
+}
+
+.cast_1:hover{
+    background-color: #FFBF00;
+    
+}
+
+.cast_img_1{
+    height: 225px;
+}
+
+.cast_2:hover{
+    background-color: #FFBF00;
+    
+}
+.cast_img_2{
+    height: 225px;
+    margin-top: 37px;
+}
+
+
+.cast_3:hover{
+    background-color: #FFBF00;
+    
+}
+.cast_img_3{
+    height: 243px;
+    margin-top: 0px;
+}
+
+.cast_4:hover{
+    background-color: #FFBF00;
+}
+.cast_img_4{
+    height: 225px;
+    margin-top: 29px;
+}
+
+
+/*------------------------------------------------- MOVIE GALLERY section---------------------------------------------------- */
+
+
+.movie_1{
+    text-align: center;
+    font-size: 50px;
+
+}
+.movie_1::before{
+    content: "-------";
+    color: #FFBF00;
+    text-align: center;
+}
+
+.movie_1::after{
+    content: "-------";
+    color: #FFBF00;
+    text-align: center;
+}
+
+.movie_1{
+    padding: 10px;
+    margin: 50px;
+}
+.gallery_1{
+    padding-left: 190px;
+}
+
+
+
+/*------------------------------------------------------ LATEST VIDEOS----------------------------------------------------------------------- */
+
+.latest_heading{
+    text-align: center;
+    padding: 85px;
+    /* margin: 26px; */
+    font-size: 55px;
+}
+
+.latest_heading::before{
+    content: "-------";
+    color: #FFBF00;
+    text-align: center;
+}
+
+.latest_heading::after{
+    content: "-------";
+    color: #FFBF00;
+    text-align: center;
+}
+
+.l_video{
+    text-align: center;
+    display: flex;
+    padding: 20px;
+    padding-left: 100px;
+
+}
+
+
+/*----------------------------------------------- review section ------------------------------------------*/
+
+.back{
+    margin-bottom: 120px;
+    margin-top: 120px;
+    background-image: url("https://megaone.acrothemes.com/film/img/test1.jpg");
+    height: 650px;
+    width: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    background-attachment: fixed;
+    
+}
+
+.b1{
+    position: absolute;
+    height: 300px;
+    width: 430px;
+    background-color: white;
+    color: black;
+    top: 25%;
+    right: 40%;
+    border-radius: 30px;
+    padding: 20px;
+    margin-bottom: 20px;
+    
+}
+.b1 img{
+    border-radius: 50px;
+    text-align: center;
+    margin-left: 140px;
+    margin-top: 80px;
+
+}
+.b1 p{
+    text-align: center;
+}
+.b1 span{
+    /* background-color: white; */
+    color:#FFBF00;
+    padding-left: 145px;
+    margin-bottom: 145px;
+}
+.b1 h4{
+    color: white;
+    text-transform: uppercase;
+    padding-left: 125px;
+    margin-top: 10px;
+}
+
+.b2{
+    /* background-color: #FFBF00; */
+    padding-left: 275px;
+    display: flex;
+    padding-bottom: 20px;
+    text-align: center;
+}
+.b3{
+    padding-left: 330px;
+}
+.b4{
+    margin: 30px;
+    margin-top: 200px;
+
+    
+}
+
+
+/*------------------------------------------------ letest blog----------------------------------------------- */
+
+
+.blog1{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    padding: 0px 150px;
+    overflow: hidden;
+}
+
+.blog1 h4{
+    font-size: 30px;
+    margin-top: 25px;
+    padding: 15px;
+}
+
+.blog1 i{
+    margin-right: 10px;
+}
+
+.blog1 p{
+    margin: 0px;
+    padding: 0px;
+    padding: 15px;
+}
+
+.icon20, .icon21, .icon22{
+    display: flex;
+    margin: 5px;
+    gap: 20px ;
+    padding: 15px;
+}
+.blog2 :hover{
+    color:#FFBF00;
+}
+.blog3 :hover{
+    color:#FFBF00;
+}
+.blog4 :hover{
+    color:#FFBF00;
+}
+
+
+li{
+    list-style-type: none;
+}
+.latest2{
+    text-align: center;
+    font-size: 45px;
+    padding: 120px;
+}
+
+
+.latest2::before{
+    content: "-------";
+    color: #FFBF00;
+    text-align: center;
+}
+
+.latest2::after{
+    content: "-------";
+    color: #FFBF00;
+    text-align: center;
+}
+
+
+/*------------------------------------------------------ LET'S GET IN TOUCH ---------------------------------------------------*/
+
+.lets{
+    font-size: 50px;
+    text-align: center;
+    padding: 120px;
+}
+
+.lets::before{
+    content: "-------";
+    color: #FFBF00;
+    text-align: center;
+}
+
+.lets::after{
+    content: "-------";
+    color: #FFBF00;
+    text-align: center;
+}
+
+.touch{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.form1 butt{
+    text-align: center;
+}
+.butt{
+    text-align: center;
+    color: white;
+    background-color: #FFBF00;
+    border: none;
+
+}
+.butt:hover{
+    background-color: black;
+    
+}
+.but{
+    text-align: center;
+}
+.add{
+    display: flex;
+    gap: 30px;
+}
+.form1{
+    outline: none;
+}
+
+
+/*----------------------------------------------------- map section ---------------------------------------------*/
+
+.map1{
+    padding-top: 150px;
+    padding-left: 220px;
+    margin-bottom: 150px;
+}
+
+.add10{
+    padding-top: 20px;
+    display: flex;
+    gap: 50px;
+    padding-left: 200px;
+    background-color: aliceblue;
+}
+.add10 p{
+    text-align: right;
+}
+.made{
+    padding-left: 300px;
+    position: relative;
+    bottom: 20px;
+}
+
+
+
+
+
+
+
+
+
