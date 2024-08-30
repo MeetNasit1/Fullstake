@@ -9,7 +9,7 @@
 
 
 
-// document.getElementById("box").innerHTML="this is javascript"
+document.getElementById("box").innerHTML="this is javascript"
 document.getElementById("box").style.color="red"
 
 
@@ -30,3 +30,13 @@ document.getElementById("box").style.color="red"
 
 // array
 // Object
+
+
+// before Es5
+var a = "25"
+console.log(a)
+
+{
+    var a = "36"
+    console.log(a)
+}
