@@ -1,4 +1,4 @@
-document.getElementById("demo") = "hello Meet"
+// document.getElementById("demo") = "hello Meet"
 
 // javascript case
 
@@ -65,6 +65,17 @@ document.getElementById("demo") = "hello Meet"
 }
 
 {
+    let name ='Meet'
+
+    let str = "this is ${name} in java"
+
+    console.log(str);
+
+    let str1 = `this is ${name} in java`
+
+    console.log(str1);
+    
+    
     
 }
 
