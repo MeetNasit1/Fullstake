@@ -84,6 +84,45 @@
 //Bitwise Operator 
 
 // 1. Bitwise AND operator  ( & )
+
+// Operation	Result
+// 0 & 0	      0
+// 0 & 1	      0
+// 1 & 0	      0
+// 1 & 1	      1
+
+
 // 1. Bitwise OR operator  ( | )
+
+// Operation	Result
+// 0 | 0	        0
+// 0 | 1	        1 
+// 1 | 0	        1
+// 1 | 1	        1
+
+
 // 1. Bitwise XOR operator  ( ^ )
+
+// Operation	Result
+// 0 ^ 0	        0
+// 0 ^ 1	        1 
+// 1 ^ 0	        1
+// 1 ^ 1	        0 
+
+
 // 1. Bitwise AND operator  ( ~ )
+
+// Decimal	Binary
+// 5	        00000000000000000000000000000101
+// 1	        00000000000000000000000000000001
+// 5 & 1	    00000000000000000000000000000001 (1)
+
+
+// Binary operator
+
+// {
+//     let x = !(0);
+//     let y = !(1);
+
+//     console.log(false ? x : y)
+// }
