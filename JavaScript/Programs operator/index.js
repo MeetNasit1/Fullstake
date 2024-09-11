@@ -31,11 +31,13 @@
 
 // 4.Find the remainder when one number is divided by another
 
-let A=17;
-let B=5;
+// let A=17;
+// let B=5;
 
-let C=A%B;
-console.log(C);
+// let C=A%B;
+// console.log(C);
+
+
 
 
 
