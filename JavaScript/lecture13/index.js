@@ -70,6 +70,47 @@
 
 }
 
+// math.sin()
+{
+    let math16 = Math.sin(30*3.14/180)
+    console.log(math16);
+}
+
+// math.trunc()
+{
+    let math17 = Math.trunc(10.10)
+    console.log(math17);
+
+}
+// math.sqrt()
+{
+    let math18 = Math.sqrt(64)
+    console.log(math18);
+}
+
+// math.sign()
+{
+    let math19 = Math.sign(56)
+    let math20 = Math.sign(-56)
+    let math21 = Math.sign(0)
+    console.log(math19);
+    console.log(math20);
+    console.log(math21);
+}
+
+// Math.cos()
+{
+    let math22 = Math.cos(60*3.14/180)
+    console.log(math22);
+}
+
+// math.log()
+{
+    let math23=Math.log(10)
+    console.log(math23);
+    
+}
+
 
 
 
