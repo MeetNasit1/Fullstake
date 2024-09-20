@@ -108,8 +108,8 @@
 {
     let math23=Math.log(10)
     console.log(math23);
-    
 }
+
 
 
 
