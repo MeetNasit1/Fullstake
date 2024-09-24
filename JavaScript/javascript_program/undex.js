@@ -61,6 +61,28 @@
     console.log(Miles);
 }
 
+// 8) Javascript Program to Convert Celsius to Fahrenheit
+{
+    let C=5;
+    let F= (C*1.8)+32;
+
+    console.log(F);
+    
+}
+
+// 9) Javascript Program to Generate a Random Number
+{
+    let Random =Math.random()*1000 
+    console.log(Random);
+    
+}
+
+// 10)Javascript Program to Check if a number is Positive, Negative, or Zero
+{
+    
+}
+
+
 
 
 
