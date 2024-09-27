@@ -145,12 +145,33 @@
 
 // 14)JavaScript Program to Print All Prime Numbers in an Interval
 {
-    let lowest =1
-    let heightes =100
+    // let lowest =1
+    // let heightes =100
     
+    // for(let i=lowest; i<=heightes;i++)
+    // {
+        
+    // }
 
     
 }
+
+// 15)JavaScript Program to Find the Factorial of a Number
+{
+    let n=5;
+    let ans=1;
+     if(n==0){
+        return 1;
+    }
+    for(let i=2;i<=n;i++)
+    {
+        ans=ans*i;
+        return ans;
+    }
+    console.log(ans);
+    
+}
+
 
 
 
