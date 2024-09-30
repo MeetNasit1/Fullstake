@@ -229,20 +229,46 @@
 
 // 22)JavaScript Program to Check if the Numbers Have Same Last Digit
 {
-    let a=11    
-    let b=22
-    let c=30
+  const a=11
+  const b=22
+  const c=30
+  
+  const result1 =a%10 
+  const result2 =b%10 
+  const result3 =c%10 
+  
+  if(result1==result2 && result1==result3)
+  {
+     console.log(a,b,c ," same");
+  }
+  else{
+    console.log(a,b,c ,"different");
+  
+  }
+}
 
-    let result1 =a%10 
-    let result2 =a%10 
-    let result3 =a%10 
 
-    if(result1==result2 && result1==result3)
+// 23)JavaScript Program to Find HCF or GCD
+
+// 24)JavaScript Program to Find LCM
+
+// 25)JavaScript Program to Find the Factors of a Number
+
+
+
+// 26)JavaScript Program to Find Sum of Natural Numbers Using Recursion
+{
+  function sum(num){
+    if(num>0)
     {
-        console.log(a,b,c ,"same");
+      return sum + sum(num-1 )
     }
     else{
-        console.log(a,b,c ,"different");
-
+      
     }
+  }
 }
+
+
+
+
