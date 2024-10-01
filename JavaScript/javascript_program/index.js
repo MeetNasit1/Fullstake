@@ -187,66 +187,55 @@
 
 // 18)JavaScript Program to Check Armstrong Number
 {
-//   const operator = prompt("Enter operator ( either +, -, * or / ): ");  
-
-//   let number1 = 10;
-//   let number2 = 50;
-//   let result;
-
-//   if (operator == "+") 
-//     {
-//     result = number1 + number2;
-//   } 
-//   else if (operator == "-")
-//      {
-//     result = number1 - number2;
-//   }
-//    else if (operator == "*") 
-//     {
-//     result = number1 * number2;
-//   } 
-//   else {
-//     result = number1 / number2;
-//   }
-
-//   console.log(`${number1} ${operator} ${number2} = ${result}`);
+  //   const operator = prompt("Enter operator ( either +, -, * or / ): ");
+  //   let number1 = 10;
+  //   let number2 = 50;
+  //   let result;
+  //   if (operator == "+")
+  //     {
+  //     result = number1 + number2;
+  //   }
+  //   else if (operator == "-")
+  //      {
+  //     result = number1 - number2;
+  //   }
+  //    else if (operator == "*")
+  //     {
+  //     result = number1 * number2;
+  //   }
+  //   else {
+  //     result = number1 / number2;
+  //   }
+  //   console.log(`${number1} ${operator} ${number2} = ${result}`);
 }
-
 
 // 21)JavaScript Program to Find the Sum of Natural Numbers
 {
-    let number=100;
-    let sum =0;
+  let number = 100;
+  let sum = 0;
 
-    for(let i=1;i<=100;i++)
-    {
-        sum +=i
-    }
-    console.log(sum);
-    
+  for (let i = 1; i <= 100; i++) {
+    sum += i;
+  }
+  console.log(sum);
 }
-
 
 // 22)JavaScript Program to Check if the Numbers Have Same Last Digit
 {
-  const a=11
-  const b=22
-  const c=30
-  
-  const result1 =a%10 
-  const result2 =b%10 
-  const result3 =c%10 
-  
-  if(result1==result2 && result1==result3)
-  {
-     console.log(a,b,c ," same");
-  }
-  else{
-    console.log(a,b,c ,"different");
-  
+  const a = 11;
+  const b = 22;
+  const c = 30;
+
+  const result1 = a % 10;
+  const result2 = b % 10;
+  const result3 = c % 10;
+
+  if (result1 == result2 && result1 == result3) {
+    console.log(a, b, c, " same");
+  } else {
+    console.log(a, b, c, "different");
   }
 }
-
 
 // 23)JavaScript Program to Find HCF or GCD
 
@@ -254,21 +243,134 @@
 
 // 25)JavaScript Program to Find the Factors of a Number
 
-
-
 // 26)JavaScript Program to Find Sum of Natural Numbers Using Recursion
 {
-  function sum(num){
-    if(num>0)
-    {
-      return sum + sum(num-1 )
+  function sum(num) {
+    if (num > 0) {
+      return num + sum(num - 1);
+    } else {
+      return num;
     }
-    else{
-      
+  }
+  let num = 100;
+  console.log(sum(num));
+}
+
+//   27)JavaScript Program to Guess a Random Number
+{
+  let Random = Math.random() * 50;
+  console.log(Random);
+}
+
+// 28)JavaScript Program to Shuffle Deck of Cards
+
+// 29)JavaScript Program to Display Fibonacci Sequence Using Recursion
+{
+  let num;
+  function Fibonacci(num) {
+    if (num < 2) {
+      return num;
+    } else {
+      return Fibonacci(num - 1) + Fibonacci(num - 2);
     }
+  }
+  let number = 10;
+  for (let i = 0; i < number; i++) {
+    console.log(Fibonacci(i));
   }
 }
 
+// 30)JavaScript Program to Find Factorial of Number Using Recursion
+{
+  function Factorial(x) {
+    if (x == 0) {
+      return 1;
+    } else {
+      return x * Factorial(x - 1);
+    }
+  }
+  const number = 10;
+  const result = Factorial(number);
+  console.log(result);
+}
+
+// 31)JavaScript Program to Convert Decimal to Binary
+{
+  let number = 100;
+  let result = number.toString(2);
+
+  console.log(result);
+}
+
+// 32)JavaScript Program to Find ASCII Value of Character
+{
+  const string = "m";
+  const result = string.charCodeAt(0);
+  console.log(result);
+}
+
+// 33)JavaScript Program to Check Whether a String is Palindrome or Not
+
+// 34)JavaScript Program to Sort Words in Alphabetical Order
+{
+  let  string = "z  a  b k  ";
+
+  let words = string.split(" ");
+
+  words.sort();
+  for (const element of words)
+  {
+    console.log(element);
+  }
+}
+
+
+// 35)JavaScript Program to Replace Characters of a String
+{
+    let string ='Mr red has a red house and a red car';
+
+    let change=string.replace('red','blue')
+
+    console.log(change);
+    
+}
+
+// 36)JavaScript Program to Reverse a String
+{
+  let string ='meet nasit'
+  let string1=string.split("")
+  let String2=string1.reverse()
+  let String3=String2.join(" ")
+
+  console.log(String3);
+
+}
+
+// 37)JavaScript Program to Create Objects in Different Ways
+{
+    const person ={
+      name:"meet",
+      age:19
+
+    }
+    console.log(typeof person);
+
+    const person1 = new Object({
+      name:"meet",
+      age:19
+
+    })
+    console.log(typeof person1);
+    
+}
+
+
+// 38)JavaScript Program to Check the Number of Occurrences of a Character in
+// the String
+
+{
+  
+}
 
 
 
