@@ -26,7 +26,7 @@ class Batsman
        cout<<"enter notout:";
        cin>>notout;
        cout<<"enter runs:";
-       cin>>runs; 
+       cin>>runs;        
    }
    void displaydata()
    {
