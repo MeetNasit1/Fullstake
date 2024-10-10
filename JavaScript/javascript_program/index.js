@@ -1043,7 +1043,7 @@ that spans across multiple lines`;
 
 // 92. JavaScript Program To Work With Constants
 
-{
+{1
   const a = 5;
   console.log(a);
 
