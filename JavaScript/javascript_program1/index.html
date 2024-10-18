@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <section>
+        <h1>Read Records</h1>
+        <hr>
+        <div class="filter-data">
+            <div>
+                <input type="text" placeholder="Type a name...">
+            </div>
+            <div>
+                <button class="delete-btn">Delete Selected</button>
+                <button class="edit-btn">Export CSV</button>
+                <button class="record-btn">Create Record</button>
+            </div>
+        </div>
+
+        <div class="table-data">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Description</th>
+                        <th>Price</th>
+                        <th>Category</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Pilow</td>
+                        <td>sleeping well is important</td>
+                        <td>$8.99</td>
+                        <td>Personal</td>
+                        <td>
+                            <button class="edit-btn">Edit</button>
+                            <button class="delete-btn">Delete</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Earphonr</td>
+                        <td>you need this one  if you have music</td>
+                        <td>$9.00</td>
+                        <td>Personal</td>
+                        <td>
+                            <button class="edit-btn">Edit</button>
+                            <button class="delete-btn">Delete</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Mouse</td>
+                        <td>very usefull if you have your computer</td>
+                        <td>$11.35</td>
+                        <td>Personal</td>
+                        <td>
+                            <button class="edit-btn">Edit</button>
+                            <button class="delete-btn">Delete</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Trash can</td>
+                        <td>it will help you  maintain clenliness</td>
+                        <td>$3.95</td>
+                        <td>Sports</td>
+                        <td>
+                            <button class="edit-btn">Edit</button>
+                            <button class="delete-btn">Delete</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Eye glasses</td>
+                        <td>it mack your read better</td>
+                        <td>$8.99</td>
+                        <td>Sports</td>
+                        <td>
+                            <button class="edit-btn">Edit</button>
+                            <button class="delete-btn">Delete</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="pagination">
+            <div>
+                <button class="pagi-btn1">1</button>
+                <button class="pagi-btn2">2</button>
+                <button class="pagi-btn2">>></button>
+            </div>
+            <div class="go">
+                <input type="text" placeholder="Type page number...">
+                <button>Go</button>
+            </div>
+        </div>
+    </section>
+    <script src="index.js"></script>
+</body>
+</html>
