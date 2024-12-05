@@ -239,7 +239,7 @@ where client_no = "C00005";
 -- +-----------+----------------+----------+----------+-----------+---------+-------------+----------+
 -- | client_no | name           | address1 | address2 | city      | pincode | state       | bal_due  |
 -- +-----------+----------------+----------+----------+-----------+---------+-------------+----------+
--- | C00001    | Ivan Bayross   | A        | 5        | Mumbai    |  400054 | Maharashtra | 15000.00 |
+-- | C00001    | Ivan Bayross   | A        | 5        | Mumbai   0000000     |  400054 | Maharashtra | 15000.00 |
 -- | C00002    | Mamta Muzumdar | C        | 10       | Madras    |  780001 | Tamil Nadu  |     0.00 |
 -- | C00003    | Chhaya Bankar  | B        | 7        | Mumbai    |  400057 | Maharashtra |  5000.00 |
 -- | C00004    | Ashwini Joshi  | E        | 2        | Bangalore |  560001 | Karnataka   |     0.00 |

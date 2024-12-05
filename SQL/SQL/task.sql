@@ -289,10 +289,116 @@ mysql> select * from salesmen_master;
 +------------+--------+--------+----------+----------+---------+----------+----------+-------+---------+-------------+
 4 rows in set (0.00 sec)
 
+-- join  
+
+select description,product_rate
+from product_master,sales_order_details
+where product_master.product_no = sales_order_details.product_no;
+
+-- mysql> select description,product_rate
+--     -> from product_master,sales_order_details
+--     -> where product_master.product_no = sales_order_details.product_no;
+-- +--------------+--------------+
+-- | description  | product_rate |
+-- +--------------+--------------+
+-- | T-Shirts     |       525.00 |
+-- | Denim Shirts |      8400.00 |
+-- | Pull Overs   |      5250.00 |
+-- | T-Shirts     |       525.00 |
+-- | Trousers     |      3150.00 |
+-- | Pull Overs   |      5250.00 |
+-- | T-Shirts     |       525.00 |
+-- | Shirts       |      1050.00 |
+-- | Cotton Jeans |     12000.00 |
+-- | Denim Shirts |      8400.00 |
+-- | T-Shirts     |       525.00 |
+-- | Lycra Tops   |      1050.00 |
+-- +--------------+--------------+
+-- 12 rows in set (0.00 sec)
 
 
 
 
+select pm.description , sod.product_rate
+from product_master pm , sales_order_details sod
+where  pm.product_no = sod.product_no;
+
+-- mysql> select pm.description , sod.product_rate
+--     -> from product_master pm , sales_order_details sod
+--     -> where  pm.product_no = sod.product_no;
+-- +--------------+--------------+
+-- | description  | product_rate |
+-- +--------------+--------------+
+-- | T-Shirts     |       525.00 |
+-- | Denim Shirts |      8400.00 |
+-- | Pull Overs   |      5250.00 |
+-- | T-Shirts     |       525.00 |
+-- | Trousers     |      3150.00 |
+-- | Pull Overs   |      5250.00 |
+-- | T-Shirts     |       525.00 |
+-- | Shirts       |      1050.00 |
+-- | Cotton Jeans |     12000.00 |
+-- | Denim Shirts |      8400.00 |
+-- | T-Shirts     |       525.00 |
+-- | Lycra Tops   |      1050.00 |
+-- +--------------+--------------+
+-- 12 rows in set (0.00 sec)
+
+
+select sales_order_details.order_no,product_rate,description
+from sales_order,sales_order_details , product_master
+where sales_order_details.order_no = sales_order.order_no and sales_order_details.product_no= product_master.product_no;
+
+
+-- mysql> select sales_order_details.order_no,product_rate,description
+--     -> from sales_order,sales_order_details , product_master
+--     -> where sales_order_details.order_no = sales_order.order_no and sales_order_details.product_no= product_master.product_no;
+-- +----------+--------------+--------------+
+-- | order_no | product_rate | description  |
+-- +----------+--------------+--------------+
+-- | O19001   |       525.00 | T-Shirts     |
+-- | O19001   |      8400.00 | Denim Shirts |
+-- | O19001   |      5250.00 | Pull Overs   |
+-- | O19003   |     12000.00 | Cotton Jeans |
+-- | O19002   |       525.00 | T-Shirts     |
+-- | O46865   |      3150.00 | Trousers     |
+-- | O46865   |      5250.00 | Pull Overs   |
+-- | O46865   |       525.00 | T-Shirts     |
+-- | O46865   |      1050.00 | Shirts       |
+-- | O46866   |      8400.00 | Denim Shirts |
+-- | O19008   |       525.00 | T-Shirts     |
+-- | O19008   |      1050.00 | Lycra Tops   |
+-- +----------+--------------+--------------+
+-- 12 rows in set (0.00 sec)
+
+
+
+
+
+select salesman_name,sell_price
+from salesman_master,product_master,sales_order,sales_order_details
+where  sales_order.salesman_no =salesman_master.salesman_no
+and  sales_order_details.product_no=product_master.product_no;
+
+
+select salesman_name, sales_order.salesman_no,order_status
+from salesman_master,sales_order
+where  sales_order.salesman_no =salesman_master.salesman_no;
+
+-- mysql> select salesman_name, sales_order.salesman_no,order_status
+--     -> from salesman_master,sales_order
+--     -> where  sales_order.salesman_no =salesman_master.salesman_no;
+-- +---------------+-------------+--------------+
+-- | salesman_name | salesman_no | order_status |
+-- +---------------+-------------+--------------+
+-- | Aman          | S00001      | In Process   |
+-- | Aman          | S00001      | Fulfilled    |
+-- | Omkar         | S00002      | Cancelled    |
+-- | Omkar         | S00002      | Cancelled    |
+-- | Raj           | S00003      | Fulfilled    |
+-- | Ashish        | S00004      | In Process   |
+-- +---------------+-------------+--------------+
+-- 6 rows in set (0.00 sec)
 
 
 
