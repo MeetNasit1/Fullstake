@@ -92,5 +92,10 @@ mysql> truncate table  (table name);
 mysql> drop table (table name);
 
 
+-- join 
+
+
+
+
 
 
