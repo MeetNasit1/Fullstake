@@ -404,7 +404,7 @@ where  sales_order.salesman_no =salesman_master.salesman_no;
 -- hand on exercises
 
 
--- join query question 2
+-- join query question 2 ANSI
 
 --  A. find out the product which have been sold to  Ivan Bayross
 
@@ -441,7 +441,7 @@ and name ="Ivan Bayross" ;
 -- +--------------+-----------+--------------+
 -- 18 rows in set (0.00 sec)
 
-B 
+-- B 
 
 select description , qty_ordered,dely_date
 from sales_order, sales_order_details, product_master
@@ -537,9 +537,9 @@ where sales_order_details.product_no = product_master.product_no;
 
 
 
-mysql> select product_master.product_no , description
-    -> from product_master, sales_order_details, client_master
-    -> where sales_order_details.product_no = product_master.product_no;
+-- mysql> select product_master.product_no , description
+--     -> from product_master, sales_order_details, client_master
+--     -> where sales_order_details.product_no = product_master.product_no;
 -- +------------+--------------+
 -- | product_no | description  |
 -- +------------+--------------+
@@ -625,23 +625,50 @@ from client_master, product_master, sales_order_details
 where sales_order_details.product_no = product_master.product_no 
 and description = "Trousers" ;
 
-mysql> select name , description
-    -> from client_master, product_master, sales_order_details
-    -> where sales_order_details.product_no = product_master.product_no
-    -> and description = "Trousers" ;
-+----------------+-------------+
-| name           | description |
-+----------------+-------------+
-| Ivan Bayross   | Trousers    |
-| Mamta Muzumdar | Trousers    |
-| Chhaya Bankar  | Trousers    |
-| Ashwini Joshi  | Trousers    |
-| Hansel Colaco  | Trousers    |
-| Deepak Sharma  | Trousers    |
-+----------------+-------------+
-6 rows in set (0.00 sec)
+-- mysql> select name , description
+--     -> from client_master, product_master, sales_order_details
+--     -> where sales_order_details.product_no = product_master.product_no
+--     -> and description = "Trousers" ;
+-- +----------------+-------------+
+-- | name           | description |
+-- +----------------+-------------+
+-- | Ivan Bayross   | Trousers    |
+-- | Mamta Muzumdar | Trousers    |
+-- | Chhaya Bankar  | Trousers    |
+-- | Ashwini Joshi  | Trousers    |
+-- | Hansel Colaco  | Trousers    |
+-- | Deepak Sharma  | Trousers    |
+-- +----------------+-------------+
+-- 6 rows in set (0.00 sec)
 
 -- E 
+
+select description, qty_ordered, name
+from client_master , product_master, sales_order_details
+where  sales_order_details.product_no = product_master.product_no
+and description = 'Pull Overs' and qty_ordered <5;
+
+-- mysql> select description, qty_ordered, name
+--     -> from client_master , product_master, sales_order_details
+--     -> where  sales_order_details.product_no = product_master.product_no
+--     -> and description = 'Pull Overs' and qty_ordered <5;
+-- +-------------+-------------+----------------+
+-- | description | qty_ordered | name           |
+-- +-------------+-------------+----------------+
+-- | Pull Overs  |           3 | Ivan Bayross   |
+-- | Pull Overs  |           2 | Ivan Bayross   |
+-- | Pull Overs  |           3 | Mamta Muzumdar |
+-- | Pull Overs  |           2 | Mamta Muzumdar |
+-- | Pull Overs  |           3 | Chhaya Bankar  |
+-- | Pull Overs  |           2 | Chhaya Bankar  |
+-- | Pull Overs  |           3 | Ashwini Joshi  |
+-- | Pull Overs  |           2 | Ashwini Joshi  |
+-- | Pull Overs  |           3 | Hansel Colaco  |
+-- | Pull Overs  |           2 | Hansel Colaco  |
+-- | Pull Overs  |           3 | Deepak Sharma  |
+-- | Pull Overs  |           2 | Deepak Sharma  |
+-- +-------------+-------------+----------------+
+-- 12 rows in set (0.00 sec)
 
 -- F 
 
@@ -916,3 +943,310 @@ and  client_no= "C00001" ||  client_no= "C00002" ;
 -- | T-Shirts     | Mamta Muzumdar |           5 |
 -- +--------------+----------------+-------------+
 -- 120 rows in set, 1 warning (0.00 sec)
+
+
+-- ANSI 
+
+-- G 
+
+select description, name, qty_ordered
+from sales_order_details 
+INNER join product_master
+on sales_order_details.product_no = product_master.product_no
+INNER join client_master
+where client_no = 'C00001' || client_no= 'C00003';
+
+mysql> select description, name, qty_ordered
+    -> from sales_order_details
+--     -> INNER join product_master
+--     -> on sales_order_details.product_no = product_master.product_no
+--     -> INNER join client_master
+--     -> where client_no = 'C00001' || client_no= 'C00003';
+-- +--------------+---------------+-------------+
+-- | description  | name          | qty_ordered |
+-- +--------------+---------------+-------------+
+-- | T-Shirts     | Chhaya Bankar |           4 |
+-- | T-Shirts     | Ivan Bayross  |           4 |
+-- | Denim Shirts | Chhaya Bankar |           2 |
+-- | Denim Shirts | Ivan Bayross  |           2 |
+-- | Pull Overs   | Chhaya Bankar |           2 |
+-- | Pull Overs   | Ivan Bayross  |           2 |
+-- | T-Shirts     | Chhaya Bankar |          10 |
+-- | T-Shirts     | Ivan Bayross  |          10 |
+-- | Trousers     | Chhaya Bankar |           3 |
+-- | Trousers     | Ivan Bayross  |           3 |
+-- | Pull Overs   | Chhaya Bankar |           3 |
+-- | Pull Overs   | Ivan Bayross  |           3 |
+-- | T-Shirts     | Chhaya Bankar |          10 |
+-- | T-Shirts     | Ivan Bayross  |          10 |
+-- | Shirts       | Chhaya Bankar |           4 |
+-- | Shirts       | Ivan Bayross  |           4 |
+-- | Cotton Jeans | Chhaya Bankar |           1 |
+-- | Cotton Jeans | Ivan Bayross  |           1 |
+-- | Denim Shirts | Chhaya Bankar |           1 |
+-- | Denim Shirts | Ivan Bayross  |           1 |
+-- | T-Shirts     | Chhaya Bankar |          10 |
+-- | T-Shirts     | Ivan Bayross  |          10 |
+-- | Lycra Tops   | Chhaya Bankar |           5 |
+-- | Lycra Tops   | Ivan Bayross  |           5 |
+-- +--------------+---------------+-------------+
+-- 24 rows in set, 1 warning (0.00 sec)
+
+
+-- F 
+
+select description, name, qty_ordered
+from sales_order_details 
+INNER join product_master
+on sales_order_details.product_no = product_master.product_no
+INNER join client_master
+where  name= 'ivan Bayross' || name = 'mamta Muzumdar';
+
+-- mysql> select description, name, qty_ordered
+--     -> from sales_order_details
+--     -> INNER join product_master
+--     -> on sales_order_details.product_no = product_master.product_no
+--     -> INNER join client_master
+--     -> where  name= 'ivan Bayross' || name = 'mamta Muzumdar';
+-- +--------------+----------------+-------------+
+-- | description  | name           | qty_ordered |
+-- +--------------+----------------+-------------+
+-- | T-Shirts     | Mamta Muzumdar |           4 |
+-- | T-Shirts     | Ivan Bayross   |           4 |
+-- | Denim Shirts | Mamta Muzumdar |           2 |
+-- | Denim Shirts | Ivan Bayross   |           2 |
+-- | Pull Overs   | Mamta Muzumdar |           2 |
+-- | Pull Overs   | Ivan Bayross   |           2 |
+-- | T-Shirts     | Mamta Muzumdar |          10 |
+-- | T-Shirts     | Ivan Bayross   |          10 |
+-- | Trousers     | Mamta Muzumdar |           3 |
+-- | Trousers     | Ivan Bayross   |           3 |
+-- | Pull Overs   | Mamta Muzumdar |           3 |
+-- | Pull Overs   | Ivan Bayross   |           3 |
+-- | T-Shirts     | Mamta Muzumdar |          10 |
+-- | T-Shirts     | Ivan Bayross   |          10 |
+-- | Shirts       | Mamta Muzumdar |           4 |
+-- | Shirts       | Ivan Bayross   |           4 |
+-- | Cotton Jeans | Mamta Muzumdar |           1 |
+-- | Cotton Jeans | Ivan Bayross   |           1 |
+-- | Denim Shirts | Mamta Muzumdar |           1 |
+-- | Denim Shirts | Ivan Bayross   |           1 |
+-- | T-Shirts     | Mamta Muzumdar |          10 |
+-- | T-Shirts     | Ivan Bayross   |          10 |
+-- | Lycra Tops   | Mamta Muzumdar |           5 |
+-- | Lycra Tops   | Ivan Bayross   |           5 |
+-- +--------------+----------------+-------------+
+-- 24 rows in set, 1 warning (0.00 sec)
+
+-- E 
+
+select name,description, qty_ordered
+from sales_order_details
+INNER join product_master
+on sales_order_details.product_no = product_master.product_no
+INNER join client_master
+where description = 'Pull Overs' and qty_ordered <5; 
+
+-- mysql> select name,description, qty_ordered
+--     -> from sales_order_details
+--     -> INNER join product_master
+--     -> on sales_order_details.product_no = product_master.product_no
+--     -> INNER join client_master
+--     -> where description = 'Pull Overs' and qty_ordered <5;
+-- +----------------+-------------+-------------+
+-- | name           | description | qty_ordered |
+-- +----------------+-------------+-------------+
+-- | Ivan Bayross   | Pull Overs  |           3 |
+-- | Ivan Bayross   | Pull Overs  |           2 |
+-- | Mamta Muzumdar | Pull Overs  |           3 |
+-- | Mamta Muzumdar | Pull Overs  |           2 |
+-- | Chhaya Bankar  | Pull Overs  |           3 |
+-- | Chhaya Bankar  | Pull Overs  |           2 |
+-- | Ashwini Joshi  | Pull Overs  |           3 |
+-- | Ashwini Joshi  | Pull Overs  |           2 |
+-- | Hansel Colaco  | Pull Overs  |           3 |
+-- | Hansel Colaco  | Pull Overs  |           2 |
+-- | Deepak Sharma  | Pull Overs  |           3 |
+-- | Deepak Sharma  | Pull Overs  |           2 |
+-- +----------------+-------------+-------------+
+-- 12 rows in set (0.00 sec)
+
+-- D  
+select name , description
+from sales_order_details
+INNER join product_master
+on sales_order_details.product_no = product_master.product_no
+INNER join client_master
+where description = 'Trousers';
+
+-- mysql> select name , description
+--     -> from sales_order_details
+--     -> INNER join product_master
+--     -> on sales_order_details.product_no = product_master.product_no
+--     -> INNER join client_master
+--     -> where description = 'Trousers';
+-- +----------------+-------------+
+-- | name           | description |
+-- +----------------+-------------+
+-- | Ivan Bayross   | Trousers    |
+-- | Mamta Muzumdar | Trousers    |
+-- | Chhaya Bankar  | Trousers    |
+-- | Ashwini Joshi  | Trousers    |
+-- | Hansel Colaco  | Trousers    |
+-- | Deepak Sharma  | Trousers    |
+-- +----------------+-------------+
+-- 6 rows in set (0.00 sec)
+
+
+-- C 
+
+select product_master.product_no, description
+from sales_order_details
+INNER join product_master
+on sales_order_details.product_no = product_master.product_no;
+
+-- mysql> select product_master.product_no, description
+--     -> from sales_order_details
+--     -> INNER join product_master
+--     -> on sales_order_details.product_no = product_master.product_no;
+-- +------------+--------------+
+-- | product_no | description  |
+-- +------------+--------------+
+-- | P00001     | T-Shirts     |
+-- | P00001     | T-Shirts     |
+-- | P00001     | T-Shirts     |
+-- | P00001     | T-Shirts     |
+-- | P0345      | Shirts       |
+-- | P06734     | Cotton Jeans |
+-- | P07868     | Trousers     |
+-- | P07885     | Pull Overs   |
+-- | P07885     | Pull Overs   |
+-- | P07965     | Denim Shirts |
+-- | P07965     | Denim Shirts |
+-- | P07975     | Lycra Tops   |
+-- +------------+--------------+
+
+-- B 
+
+select description, qty_ordered dely_date
+from sales_order_details
+INNER join product_master
+on sales_order_details.product_no = product_master.product_no
+INNER join sales_order;
+
+-- mysql> select description, qty_ordered dely_date
+--     -> from sales_order_details
+--     -> INNER join product_master
+--     -> on sales_order_details.product_no = product_master.product_no
+--     -> INNER join sales_order;
+-- +--------------+-----------+
+-- | description  | dely_date |
+-- +--------------+-----------+
+-- | T-Shirts     |         4 |
+-- | T-Shirts     |         4 |
+-- | T-Shirts     |         4 |
+-- | T-Shirts     |         4 |
+-- | T-Shirts     |         4 |
+-- | T-Shirts     |         4 |
+-- | Denim Shirts |         2 |
+-- | Denim Shirts |         2 |
+-- | Denim Shirts |         2 |
+-- | Denim Shirts |         2 |
+-- | Denim Shirts |         2 |
+-- | Denim Shirts |         2 |
+-- | Pull Overs   |         2 |
+-- | Pull Overs   |         2 |
+-- | Pull Overs   |         2 |
+-- | Pull Overs   |         2 |
+-- | Pull Overs   |         2 |
+-- | Pull Overs   |         2 |
+-- | T-Shirts     |        10 |
+-- | T-Shirts     |        10 |
+-- | T-Shirts     |        10 |
+-- | T-Shirts     |        10 |
+-- | T-Shirts     |        10 |
+-- | T-Shirts     |        10 |
+-- | Trousers     |         3 |
+-- | Trousers     |         3 |
+-- | Trousers     |         3 |
+-- | Trousers     |         3 |
+-- | Trousers     |         3 |
+-- | Trousers     |         3 |
+-- | Pull Overs   |         3 |
+-- | Pull Overs   |         3 |
+-- | Pull Overs   |         3 |
+-- | Pull Overs   |         3 |
+-- | Pull Overs   |         3 |
+-- | Pull Overs   |         3 |
+-- | T-Shirts     |        10 |
+-- | T-Shirts     |        10 |
+-- | T-Shirts     |        10 |
+-- | T-Shirts     |        10 |
+-- | T-Shirts     |        10 |
+-- | T-Shirts     |        10 |
+-- | Shirts       |         4 |
+-- | Shirts       |         4 |
+-- | Shirts       |         4 |
+-- | Shirts       |         4 |
+-- | Shirts       |         4 |
+-- | Shirts       |         4 |
+-- | Cotton Jeans |         1 |
+-- | Cotton Jeans |         1 |
+-- | Cotton Jeans |         1 |
+-- | Cotton Jeans |         1 |
+-- | Cotton Jeans |         1 |
+-- | Cotton Jeans |         1 |
+-- | Denim Shirts |         1 |
+-- | Denim Shirts |         1 |
+-- | Denim Shirts |         1 |
+-- | Denim Shirts |         1 |
+-- | Denim Shirts |         1 |
+-- | Denim Shirts |         1 |
+-- | T-Shirts     |        10 |
+-- | T-Shirts     |        10 |
+-- | T-Shirts     |        10 |
+-- | T-Shirts     |        10 |
+-- | T-Shirts     |        10 |
+-- | T-Shirts     |        10 |
+-- | Lycra Tops   |         5 |
+-- | Lycra Tops   |         5 |
+-- | Lycra Tops   |         5 |
+-- | Lycra Tops   |         5 |
+-- | Lycra Tops   |         5 |
+-- | Lycra Tops   |         5 |
+-- +--------------+-----------+
+
+
+
+-- A 
+
+select description, name
+from sales_order_details
+INNER join product_master
+on sales_order_details.product_no = product_master.product_no
+INNER join client_master
+where name = 'ivan Bayross';
+
+-- mysql> select description, name
+--     -> from sales_order_details
+--     -> INNER join product_master
+--     -> on sales_order_details.product_no = product_master.product_no
+--     -> INNER join client_master
+--     -> where name = 'ivan Bayross';
+-- +--------------+--------------+
+-- | description  | name         |
+-- +--------------+--------------+
+-- | T-Shirts     | Ivan Bayross |
+-- | T-Shirts     | Ivan Bayross |
+-- | T-Shirts     | Ivan Bayross |
+-- | T-Shirts     | Ivan Bayross |
+-- | Shirts       | Ivan Bayross |
+-- | Cotton Jeans | Ivan Bayross |
+-- | Trousers     | Ivan Bayross |
+-- | Pull Overs   | Ivan Bayross |
+-- | Pull Overs   | Ivan Bayross |
+-- | Denim Shirts | Ivan Bayross |
+-- | Denim Shirts | Ivan Bayross |
+-- | Lycra Tops   | Ivan Bayross |
+-- +--------------+--------------+
+-- 12 rows in set (0.00 sec)

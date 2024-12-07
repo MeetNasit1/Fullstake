@@ -46,6 +46,7 @@ select * from client_master;
 +-----------+----------------+----------+----------+-----------+---------+-------------+----------+
 6 rows in set (0.00 sec)
 
+
 create table product_master(
     product_no varchar(6) PRIMARY KEY,
     description varchar(15),
@@ -111,6 +112,7 @@ create table salesman_master(
     tgt_to_get numeric(6,2),
     ytd_sales numeric(6,2),
     remarks varchar(60)
+
 );
 
 desc salesman_master;
