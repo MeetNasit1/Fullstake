@@ -1250,3 +1250,59 @@ where name = 'ivan Bayross';
 -- | Lycra Tops   | Ivan Bayross |
 -- +--------------+--------------+
 -- 12 rows in set (0.00 sec)
+
+
+
+-- using group by 
+
+-- A 
+select  description, sum(qty_disp) 
+from sales_order_details
+INNER join product_master on sales_order_details.product_no= product_master.product_no
+group by description;
+
+
+-- mysql> select  description, sum(qty_disp)
+--     -> from sales_order_details
+--     -> INNER join product_master on sales_order_details.product_no= product_master.product_no
+--     -> group by description;
+-- +--------------+---------------+
+-- | description  | sum(qty_disp) |
+-- +--------------+---------------+
+-- | T-Shirts     |            19 |
+-- | Denim Shirts |             1 |
+-- | Pull Overs   |             2 |
+-- | Trousers     |             3 |
+-- | Shirts       |             4 |
+-- | Cotton Jeans |             1 |
+-- | Lycra Tops   |             3 |
+-- +--------------+----------
+
+
+-- B 
+
+select  description, sum(qty_disp) 
+from sales_order_details
+INNER join product_master on sales_order_details.product_no= product_master.product_no
+group by description;
+
+-- mysql> select  description, sum(qty_disp)
+--     -> from sales_order_details
+--     -> INNER join product_master on sales_order_details.product_no= product_master.product_no
+--     -> group by description;
+-- +--------------+---------------+
+-- | description  | sum(qty_disp) |
+-- +--------------+---------------+
+-- | T-Shirts     |            19 |
+-- | Denim Shirts |             1 |
+-- | Pull Overs   |             2 |
+-- | Trousers     |             3 |
+-- | Shirts       |             4 |
+-- | Cotton Jeans |             1 |
+-- | Lycra Tops   |             3 |
+-- +--------------+----------
+
+
+-- C 
+
+select 
