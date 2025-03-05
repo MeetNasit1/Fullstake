@@ -1,0 +1,14 @@
+npm init --yes //packge.json 
+tsc --init  // taconfig.json
+npm i @types/node express @types/express ts-node nodemod ts-node typescript  // node module install
+ts-node (filename.ts)
+npm i nodemon (nodemon install)
+npm install mongoose (mongoose install)
+npm i dotenv(env install)
+
+
+npm init --yes
+tsc --init
+npm i @types/node express @types/express ts-node nodemon ts-node typescript
+npm i dotenv
+npm install mongoose
